@@ -1,1 +1,40 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Galaxy Scene 2</title>
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(ellipse at center, #000022 0%, #000000 100%);
+      overflow: hidden;
+    }
+    .spiral {
+      position: absolute;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      background: white;
+      animation: spiralMove 10s linear infinite;
+    }
+    @keyframes spiralMove {
+      0% {
+        transform: translate(50vw, 50vh) rotate(0deg) translateX(0px);
+      }
+      100% {
+        transform: translate(50vw, 50vh) rotate(360deg) translateX(300px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <script>
+    for (let i = 0; i < 150; i++) {
+      const star = document.createElement('div');
+      star.className = 'spiral';
+      star.style.animationDelay = `${i * 0.1}s`;
+      document.body.appendChild(star);
+    }
+  </script>
+</body>
+</html>
