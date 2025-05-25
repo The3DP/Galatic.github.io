@@ -1,1 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Merged Galaxy Scenes</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
 
+    .scene {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: none;
+      z-index: 1;
+    }
+
+    .active {
+      display: block;
+    }
+
+    #menu {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 2;
+    }
+
+    #menu button {
+      margin: 2px;
+      padding: 8px 12px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    /* Shared animations */
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+
+    @keyframes spiralMove {
+      0% {
+        transform: translate(50vw, 50vh) rotate(0deg) translateX(0px);
+      }
+      100% {
+        transform: translate(50vw, 50vh) rotate(360deg) translateX(300px);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.3; }
+      50% { transform: scale(1.5); opacity: 0.8; }
+    }
+
+    @keyframes shoot {
+      0% { top: -50px; left: -50px; opacity: 1; }
+      100% { top: 100%; left: 100%; opacity: 0; }
+    }
+
+    @keyframes glow {
+      from { transform: scale(1); opacity: 0.7; }
+      to { transform: scale(1.5); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Scene Selector Menu -->
+  <div id="menu">
+    <button onclick="showScene(1)">Scene 1: Starry Night</button>
+    <button onclick="showScene(2)">Scene 2: Spiral</button>
+    <button onclick="showScene(3)">Scene 3: Nebula</button>
+    <button onclick="showScene(4)">Scene 4: Shooting Stars</button>
+    <button onclick="showScene(5)">Scene 5: Galaxy Core</button>
+  </div>
+
+  <!-- Scene 1: Starry Night -->
+  <div id="scene1" class="scene active" style="background: black;">
+    <script>
+      for (let i = 0; i < 200; i++) {
+        const star = document.createElement('div');
+        const size = Math.random() * 2 + 1;
+        star.style.position = 'absolute';
+        star.style.background = 'white';
+        star.style.borderRadius = '50%';
+        star.style.width = size + 'px';
+        star.style.height = size + 'px';
+        star.style.top = Math.random() * window.innerHeight + 'px';
+        star.style.left = Math.random() * window.innerWidth + 'px';
+        star.style.animation = `twinkle ${Math.random() * 2 + 1}s infinite`;
+        document.getElementById('scene1').appendChild(star);
+      }
+    </script>
+  </div>
+
+  <!-- Scene 2: Spiral Galaxy -->
+  <div id="scene2" class="scene" style="background: radial-gradient(ellipse at center, #000022 0%, #000000 100%);">
+    <script>
+      for (let i = 0; i < 150; i++) {
+        const spiral = document.createElement('div');
+        spiral.style.position = 'absolute';
+        spiral.style.borderRadius = '50%';
+        spiral.style.width = '10px';
+        spiral.style.height = '10px';
+        spiral.style.background = 'white';
+        spiral.style.animation = `spiralMove 10s linear infinite`;
+        spiral.style.animationDelay = `${i * 0.1}s`;
+        document.getElementById('scene2').appendChild(spiral);
+      }
+    </script>
+  </div>
+
+  <!-- Scene 3: Nebula Swirl -->
+  <div id="scene3" class="scene" style="background: linear-gradient(to right, #0b0033, #1a0033, #2e003e, #400040);">
+    <div class="nebula" style="top: 20%; left: 30%;"></div>
+    <div class="nebula" style="top: 50%; left: 60%;"></div>
+    <div class="nebula" style="top: 70%; left: 40%;"></div>
+    <style>
+      .nebula {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(circle, rgba(255,0,255,0.3), transparent);
+        border-radius: 50%;
+        animation: pulse 6s infinite ease-in-out;
+      }
+    </style>
+  </div>
+
+  <!-- Scene 4: Shooting Stars -->
+  <div id="scene4" class="scene" style="background: black;">
+    <script>
+      setInterval(() => {
+        if (!document.getElementById('scene4').classList.contains('active')) return;
+        const star = document.createElement('div');
+        star.style.position = 'absolute';
+        star.style.width = '3px';
+        star.style.height = '100px';
+        star.style.background = 'linear-gradient(white, transparent)';
+        star.style.transform = 'rotate(45deg)';
+        star.style.animation = 'shoot 3s linear';
+        star.style.top = Math.random() * window.innerHeight + 'px';
+        star.style.left = Math.random() * window.innerWidth + 'px';
+        document.getElementById('scene4').appendChild(star);
+        setTimeout(() => star.remove(), 3000);
+      }, 500);
+    </script>
+  </div>
+
+  <!-- Scene 5: Galaxy Core -->
+  <div id="scene5" class="scene" style="background: black; display: flex; justify-content: center; align-items: center;">
+    <div class="core"></div>
+    <style>
+      .core {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: radial-gradient(circle, #ff00ff, #ff9900, #000);
+        animation: glow 3s infinite alternate;
+      }
+    </style>
+  </div>
+
+  <script>
+    function showScene(n) {
+      for (let i = 1; i <= 5; i++) {
+        document.getElementById(`scene${i}`).classList.remove('active');
+      }
+      document.getElementById(`scene${n}`).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
