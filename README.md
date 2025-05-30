@@ -1,4 +1,6 @@
- Galatic is the last animation packet after Mation.
+<p align="center"> Galatic
+
+Galatic is the last animation packet after Mation.
 >This repository is fully (100%) complete.
 ##
 Thank you for understanding the rules and regulations in LICENSE.
