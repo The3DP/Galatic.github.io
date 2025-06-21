@@ -1,7 +1,6 @@
 <p align="center"> Galatic
 
 Galatic is the last animation packet after Mation.
->This repository is fully (100%) complete.
 ##
 Thank you for understanding the rules and regulations in LICENSE.
 For questions on this repository related to the "Creative Commons Legal Code
