@@ -1,6 +1,8 @@
 <p align="center"> Galatic
-Galatic is 
 
+  
+Galatic is a free and fun, plug and play animation packet.
+I developed this shortly after I created [Mation.](https://github.com/The3DP/Mation.github.io)
 
 # Testing Areas
 If you'd like to try this code out on a quick testing site,
