@@ -13,7 +13,15 @@ d73928430@gmail.com
 # More in the making
 Did you enjoy this repository, or maybe you found it intresting? If you did, then please leave a star. I would greatly appreciate it! And please know that there are also more in the making. You can can check out my other animation packets such as:
 
-- 5
+- [Mation-2](https://github.com/The3DP/Mation-2)
+- [Mation](https://github.com/The3DP/Mation.github.io)
+- [Quatro](https://github.com/The3DP/Quatro.github.io)
+- [AnimTrice](https://github.com/The3DP/AnimTrice.github.io)
+- [AnimDuo](https://github.com/The3DP/AnimDuo.github.io)
+- [AnimOne](https://github.com/The3DP/AnimOne.github.io)
+
+Thank You, and have a blessed day!
+
 ![100% Complete](https://img.shields.io/badge/Progress-100%25-darkgreen)
 
 ![80% Complete](https://img.shields.io/badge/README-80%25-darkgreen)
