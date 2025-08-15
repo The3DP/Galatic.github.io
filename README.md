@@ -23,5 +23,4 @@ Did you enjoy this repository, or maybe you found it intresting? If you did, the
 Thank You, and have a blessed day!
 
 ![100% Complete](https://img.shields.io/badge/Progress-100%25-darkgreen)
-
-![80% Complete](https://img.shields.io/badge/README-80%25-darkgreen)
+![100% Complete](https://img.shields.io/badge/README-100%25-darkgreen)
