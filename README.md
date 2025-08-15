@@ -1,24 +1,13 @@
 <p align="center"> Galatic
+Galatic is 
 
-Galatic is the last animation packet after Mation.
-##
-Thank you for understanding the rules and regulations in LICENSE.
-For questions on this repository related to the "Creative Commons Legal Code
-CC0 1.0 Universal" please contact me at my public email:
+
+# Testing Areas
+If you'd like to try this code out on a quick testing site,
+then click [right here.](https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default)
+# Questions?
+For questions, you can contact me at my public email:
 d73928430@gmail.com
-
-- The3DP
-##
-Recommended Testing Sites (RTS) 
-Are sites that I test these codes on
-and are sites anyone can use.
-##
-The recommended testing site for this 
-program is ww3schools.
-Click on this link to go to 
-their "Try it yourself" page which
-you can test my code on.
-https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default
 
 ![100% Complete](https://img.shields.io/badge/Progress-100%25-darkgreen)
 
